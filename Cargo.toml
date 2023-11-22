@@ -2,8 +2,14 @@
 name = "vbmeta-disable"
 version = "0.1.0"
 edition = "2021"
+authors = ["NikSun"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 enumflags2 = "0.7"
+
+[profile.release]
+strip = true
+lto = true
+opt-level = "z"
